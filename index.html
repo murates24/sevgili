@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Şeyma için • Murat'tan</title>
+  <meta name="description" content="Şeyma için sevgi dolu kişisel web sayfası." />
+  <meta property="og:title" content="Şeyma için • Murat'tan" />
+  <meta property="og:description" content="Sana özel küçük bir sürpriz hazırladım." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="theme-color" content="#ec4899" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui'] },
+          colors: { rose: { soft: '#ffe4ec' } },
+          boxShadow: {
+            glow: '0 0 0 6px rgba(236,72,153,0.12), 0 15px 30px rgba(0,0,0,0.15)'
+          },
+          keyframes: {
+            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+            pulseSoft: { '0%,100%': { opacity: .35 }, '50%': { opacity: .7 } }
+          },
+          animation: { float: 'float 6s ease-in-out infinite', pulseSoft: 'pulseSoft 3s ease-in-out infinite' }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Arka planda yumuşak kalpler */
+    .bg-hearts::before, .bg-hearts::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(236,72,153,0.18), transparent 40%),
+        radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.16), transparent 45%),
+        radial-gradient(ellipse at 50% 80%, rgba(16,185,129,0.14), transparent 45%);
+      filter: blur(20px);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-gradient-to-br from-rose-50 via-white to-rose-100 text-slate-800 relative overflow-x-hidden">
+  <div class="bg-hearts absolute inset-0 -z-10"></div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-30 backdrop-blur bg-white/60 border-b border-white/40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-rose-500 text-white shadow-glow">❤</span>
+        <span class="font-semibold">Şeyma için</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#biz" class="hover:text-rose-600">Biz</a>
+        <a href="#anilar" class="hover:text-rose-600">Anılar</a>
+        <a href="#zaman" class="hover:text-rose-600">Zaman Çizelgesi</a>
+        <a href="#muzik" class="hover:text-rose-600">Müzik</a>
+        <a href="#mesaj" class="hover:text-rose-600">Mesaj</a>
+      </nav>
+      <a href="#mesaj" class="md:hidden inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-500 text-white shadow-glow text-sm">
+        Yaz bana
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <div class="max-w-6xl mx-auto px-4 pt-16 pb-24 grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          <span id="greeting">Merhaba Şeyma</span><br>
+          <span class="text-rose-600">Sana küçük bir sürpriz hazırladım.</span>
+        </h1>
+        <p class="mt-5 text-slate-600 leading-relaxed">
+          Bu sayfanın her satırı, birlikte biriktirdiğimiz anıların bir izi gibi. İstersen kendi fotoğraflarımızı, notlarımızı ve şarkılarımızı ekleyebiliriz.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#anilar" class="px-5 py-3 rounded-xl bg-slate-900 text-white hover:opacity-90 shadow-lg">Anılara göz atalım</a>
+          <a href="#mesaj" class="px-5 py-3 rounded-xl bg-white border border-slate-200 hover:bg-slate-50">Mesaj bırak</a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2 relative">
+        <div class="absolute -top-10 -left-10 h-28 w-28 rounded-full bg-rose-200/60 blur-2xl animate-pulseSoft"></div>
+        <div class="absolute -bottom-10 -right-10 h-24 w-24 rounded-full bg-blue-200/60 blur-2xl animate-pulseSoft" style="animation-delay:1s"></div>
+        <div class="relative mx-auto max-w-sm">
+          <img src="foto/9.jpeg" alt="Şeyma" class="rounded-3xl shadow-glow object-cover aspect-[4/5]">
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-full px-4 py-2 shadow-md border border-white/60 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-rose-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span class="text-sm">Kalbimin en güzel köşesi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIZ -->
+  <section id="biz" class="py-16 bg-white/70 border-y border-white/60">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl md:text-3xl font-semibold">Biz</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">
+          İlk kahvemizden bu yana, küçük anların büyük mutluluklara dönüşebileceğini bana sen öğrettin. Bu sayfaya, 
+          birlikte yaptığımız yürüyüşleri, aynı şarkıda buluştuğumuz anları ve iç sesimizi yazdım.
+        </p>
+        <ul class="mt-6 space-y-3 text-slate-700">
+          <li>• İlk buluşma: <span class="font-medium">Taksim  Kırmızı Kedi Tünel</span></li>
+          <li>• Favori içeceğimiz: <span class="font-medium"> Benim Filtre kahve  Senin laktozsuz latte</span></li>
+          <li>• Bizim kelimemiz: <span class="font-medium">"Aşkımm"</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ANILAR / GALERİ -->
+  <section id="anilar" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Anılar</h2>
+      <div class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <!-- Bu görselleri kendi fotoğraflarınla değiştir -->
+        <img class="rounded-2xl shadow-md object-cover aspect-[3/3]" src="foto/1.jpeg" alt="Anı 1">
+        <img class="rounded-2xl shadow-md object-cover aspect-[3/3]" src="foto/2.jpeg" alt="Anı 2">
+        <img class="rounded-2xl shadow-md object-cover aspect-[100%]" src="foto/3.jpeg" alt="Anı 3">
+        <img class="rounded-2xl shadow-md object-cover aspect-[3/2]" src="foto/4.jpeg" alt="Anı 4">
+		<img class="rounded-2xl shadow-md object-cover aspect-[3/4]" src="foto/5.jpeg" alt="Anı 3">
+        <img class="rounded-2xl shadow-md object-cover aspect-[3/3]" src="foto/6.jpeg" alt="Anı 4">
+		        <img class="rounded-2xl shadow-md object-cover aspect-[3/4]" src="foto/7.jpeg" alt="Anı 3">
+        <img class="rounded-2xl shadow-md object-cover aspect-[3/2]" src="foto/8.jpeg" alt="Anı 4">
+		<img class="rounded-2xl shadow-md object-cover aspect-[3/4]" src="foto/9.jpeg" alt="Anı 3">
+        <img class="rounded-2xl shadow-md object-cover aspect-[3/2]" src="foto/10.jpeg" alt="Anı 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAMAN ÇİZELGESİ -->
+  <section id="zaman" class="py-16 bg-white/70 border-y border-white/60">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Zaman Çizelgesi</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="space-y-5">
+          <div class="p-5 rounded-2xl border bg-white shadow-sm">
+            <div class="text-xs uppercase tracking-wider text-slate-500">28.05.2025</div>
+            <div class="font-semibold mt-1">İlk mesaj</div>
+            <p class="text-slate-600 mt-2">"Merhaba ben Murat" ile başlayan o akşam…</p>
+          </div>
+          <div class="p-5 rounded-2xl border bg-white shadow-sm">
+            <div class="text-xs uppercase tracking-wider text-slate-500">28.05.2025</div>
+            <div class="font-semibold mt-1">İlk Yemek ve İlk kahve</div>
+            <p class="text-slate-600 mt-2">Taksimde Midpoint Beyoğlu da</p>
+          </div>
+        </div>
+        <div class="space-y-5">
+          <div class="p-5 rounded-2xl border bg-white shadow-sm">
+            <div class="text-xs uppercase tracking-wider text-slate-500">28.05.2025</div>
+            <div class="font-semibold mt-1">İlk etkinliğimiz</div>
+            <p class="text-slate-600 mt-2">Beyoğlu stand up gecesi</p>
+          </div>
+          <div class="p-5 rounded-2xl border bg-white shadow-sm">
+            <div class="text-xs uppercase tracking-wider text-slate-500">28.06.2025</div>
+            <div class="font-semibold mt-1">İlk ay dönümü kutlamamız</div>
+            <p class="text-slate-600 mt-2">Pasta Sanatı Beşiktaş.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALINTILAR / SÖZLER -->
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold">Sözlerin</h2>
+      <p class="text-slate-500 mt-2">Sayfayı her yenilediğinde farklı bir söz görülecek.</p>
+      <blockquote id="soz" class="mt-8 text-xl md:text-2xl leading-relaxed text-slate-700"></blockquote>
+    </div>
+  </section>
+
+  <!-- MÜZİK -->
+  <section id="muzik" class="py-16 bg-white/70 border-y border-white/60">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Bizim Şarkımız</h2>
+      <p class="text-slate-600 mt-3">Aşağıdaki Spotify gömülü çaları kendi şarkımızla değiştirebiliriz.</p>
+      <div class="mt-6 rounded-2xl overflow-hidden shadow-md border">
+        <!-- Spotify embed: linki değiştir -->
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6L5bFVkHLtTjhd7aFi7YQB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESAJ -->
+  <section id="mesaj" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Mesajını Bırak</h2>
+      <p class="text-slate-600 mt-3">Bana bir not yaz ya da WhatsApp'tan gönder. (Numara ve metin otomatik dolar.)</p>
+      <form id="msgForm" class="mt-6 grid gap-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <input id="ad" class="px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-rose-500" placeholder="Adın" />
+          <input id="tel" class="px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-rose-500" placeholder="Telefon (5xx...)" />
+        </div>
+        <textarea id="metin" class="px-4 py-3 rounded-xl border min-h-[120px] focus:outline-none focus:ring-2 focus:ring-rose-500" placeholder="Sana söylemek istediğim…">Seninle her şey daha güzel. 💗</textarea>
+        <div class="flex flex-wrap gap-3">
+          <button type="button" id="btnWA" class="px-5 py-3 rounded-xl bg-rose-500 text-white shadow-glow">WhatsApp ile gönder</button>
+          <a id="btnMail" class="px-5 py-3 rounded-xl bg-white border hover:bg-slate-50" href="#">E‑posta ile gönder</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-sm text-slate-500">
+    Hazırlandı: <span class="font-medium">Murat</span> • <span class="opacity-70">Sevgiyle</span>
+  </footer>
+
+  <script>
+    // Selamı kişiselleştir: URL'deki ?ad= parametresini ve localStorage'ı kullan
+    const params = new URLSearchParams(location.search);
+    const adParam = params.get('ad');
+    const storedName = localStorage.getItem('ad');
+    const ad = adParam || storedName || 'Şeyma';
+    if (adParam) localStorage.setItem('ad', adParam);
+    document.getElementById('greeting').textContent = `Merhaba ${ad}`;
+
+    // Söz havuzu
+    const sozler = [
+      '"Kahve aynı kahve ama sen olmayınca tadı eksik kalıyor."',
+      '"Yanımda olduğunda, şehir daha sessiz, gökyüzü daha açık."',
+      '"Kalbim, seninle yürürken yolunu kendi buluyor."',
+      '"Bazen susmak, en net “seni seviyorum”dur."',
+      '"Birlikte aynı şarkıyı duymak, aynı hayali kurmak demek."'
+    ];
+    document.getElementById('soz').textContent = sozler[Math.floor(Math.random() * sozler.length)];
+
+    // WhatsApp ve e‑posta linkleri
+    const waBtn = document.getElementById('btnWA');
+    const mailBtn = document.getElementById('btnMail');
+    const telInp = document.getElementById('tel');
+    const adInp = document.getElementById('ad');
+    const msgInp = document.getElementById('metin');
+
+    function buildMsg(){
+      const name = adInp.value || ad;
+      const text = `${name} diyor ki: ${msgInp.value}`;
+      return encodeURIComponent(text);
+    }
+
+    waBtn.addEventListener('click', () => {
+      const tel = (telInp.value || '').replace(/\D/g,'');
+      if(!tel){ alert('Lütfen telefon numarası gir.'); return; }
+      const url = `https://wa.me/90${tel.startsWith('0') ? tel.slice(1) : tel}?text=${buildMsg()}`;
+      window.open(url, '_blank');
+    });
+
+    mailBtn.addEventListener('click', () => {
+      const subject = encodeURIComponent('Sana bir not bıraktım');
+      const body = buildMsg();
+      mailBtn.href = `mailto:murat@example.com?subject=${subject}&body=${body}`; // e‑postanı gir
+    });
+  </script>
+</body>
+</html>
